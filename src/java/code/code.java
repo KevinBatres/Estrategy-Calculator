@@ -11,24 +11,28 @@ package code;
  */
 public class code {
 
+    //matriz de decision
     public String[] matriza(int aaa, int bbb, int ccc, int ddd, int aaaa, int bbbb, int cccc, int dddd) {
 
+        //Estas variables representan los pagos del jugador 1
         int A = aaa;
         int B = bbb;
         int C = ccc;
         int D = ddd;
 
+        //Estas variables representan los pagos del jugador 2
         int AA = aaaa;
         int BB = bbbb;
         int CC = cccc;
         int DD = dddd;
 
+        //Estas variables son las que retorna el metodo, donde se guardan los resultados.
         String dominante = "";
         String maxmin = "";
         String enash = "";
 
-        //estrategia dominante
-        //El jugador 1 equivale al ultimo numero de cada cuadro de la tabla.
+        //Estrategia dominante
+        //Se declara las estrategias de cada quien
         int estrategia1[] = {AA, CC};
         int estrategia2[] = {BB, DD};
 
@@ -43,20 +47,19 @@ public class code {
             }
         }
 
-        //Jugador 2 minmax
-        //El jugador 2 equivale al numero central de cada cuadro de la tabla
+        
         //obtener MAXIMIN
         int m, min1 = estrategia1[0];
         int n, min2 = estrategia2[0];
 
-        //Estrategia 1
+        //Obtener el minimo de la Estrategia 1
         for (m = 0; m < estrategia1.length; m++) {
             if (min1 > estrategia1[m]) {
                 min1 = estrategia1[m];
             }
         }
 
-        //Estrategia 2
+        //Obtener el minimo de la Estrategia 2
         for (n = 0; n < estrategia2.length; n++) {
             if (min2 > estrategia2[n]) {
                 min2 = estrategia2[n];
@@ -66,7 +69,7 @@ public class code {
         int[] listmin = {min1, min2};
         int ma, max = listmin[0];
 
-        //max
+        //Obtener el max de los minimos
         for (ma = 0; ma < listmin.length; ma++) {
             if (max < listmin[ma]) {
                 max = listmin[ma];
@@ -155,6 +158,7 @@ public class code {
             enash = "No hay equilibrio nash";
         }
 
+        //arreglo para retornar los valores
         String[] respuestas = {dominante, maxmin, enash};
         return respuestas;
 
@@ -162,6 +166,7 @@ public class code {
 
     public String[] matrizb(int aaa, int bbb, int ccc, int ddd, int eee, int fff, int ggg, int hhh, int iii, int aaaa, int bbbb, int cccc, int dddd, int eeee, int ffff, int gggg, int hhhh, int iiii) {
 
+        //Estas variables representan los pagos del jugador 1
         int A = aaa;
         int B = bbb;
         int C = ccc;
@@ -172,6 +177,7 @@ public class code {
         int H = hhh;
         int I = iii;
 
+        //Estas variables representan los pagos del jugador 2
         int AA = aaaa;
         int BB = bbbb;
         int CC = cccc;
@@ -182,12 +188,13 @@ public class code {
         int HH = hhhh;
         int II = iiii;
 
+        //Estas variables son las que retorna el metodo, donde se guardan los resultados.
         String dominante = "";
         String maxmin = "";
         String enash = "";
 
         //estrategia dominante
-        //El jugador 1 equivale al ultimo numero de cada cuadro de la tabla.
+        //Se declara las estrategias de cada quien
         int estrategia1[] = {AA, DD, GG};
         int estrategia2[] = {BB, EE, HH};
         int estrategia3[] = {CC, FF, II};
@@ -212,7 +219,7 @@ public class code {
         System.out.println("/n");
 
         //Jugador 2 minmax
-        //El jugador 2 equivale al numero central de cada cuadro de la tabla
+       
         System.out.println("MAXMIN: ");
 
         //obtener MAXIMIN
@@ -220,21 +227,21 @@ public class code {
         int n, min2 = estrategia2[0];
         int o, min3 = estrategia3[0];
 
-        //Estrategia 1
+        //Obtener el minimo de la Estrategia 1
         for (m = 0; m < estrategia1.length; m++) {
             if (min1 > estrategia1[m]) {
                 min1 = estrategia1[m];
             }
         }
 
-        //Estrategia 2
+        //Obtener el minimo de la Estrategia 2
         for (n = 0; n < estrategia2.length; n++) {
             if (min2 > estrategia2[n]) {
                 min2 = estrategia2[n];
             }
         }
 
-        //Estrategia 3
+        //Obtener el minimo de la Estrategia 3
         for (o = 0; o < estrategia3.length; o++) {
             if (min3 > estrategia3[o]) {
                 min3 = estrategia3[o];
@@ -245,7 +252,7 @@ public class code {
         int ma, max = listmin[0];
         System.out.println(max);
 
-        //max
+        //Obtener max de los minimos
         for (ma = 0; ma < listmin.length; ma++) {
             if (max < listmin[ma]) {
                 max = listmin[ma];
@@ -395,12 +402,15 @@ public class code {
             }
         }
 
+        
         //arreglo con los mayores de cada estrategia para comparar y encontrar el equilibrio nash
         String j1[] = {pos1, pos2, pos3};
         String j2[] = {pos4, pos5, pos6};
 
+        
         //indicador de si exiten equilibrios;
         boolean nash = false;
+        
         //contador de cuantos equilibrio encontro
         int count = 0;
 
@@ -419,6 +429,7 @@ public class code {
              enash = "No hay equilibrio nash";
         }
 
+        //Arreglo de variables para retornar las estrategias resultantes
         String[] respuestas = {dominante, maxmin, enash};
         return respuestas;
     }

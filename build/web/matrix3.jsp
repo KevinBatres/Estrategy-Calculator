@@ -91,7 +91,7 @@
     <body>
 
 
-
+<!-- Seccion de 3x3 -->
         <section id="matriz3" class="features-area relative padding-100-50 gray-bg">
             <div class="container">
                 <div class="row">
@@ -176,14 +176,15 @@
                         </table>
                         <br>
                         <br>
-                        <div id="resultados" style="color: #fff!important"> 
+                        <!-- Seccion de Resultados -->
+                        <div id="resultados" clase="col-sm-12 col-xs-12" style="color: #fff!important"> 
                             <h4>Estrategia Dominante: </h4><h5><%out.println(dominante);%></h5>
                             <br>
                             <h4>Estrategia MaxMin: </h4><h5><%out.println(maxmin);%></h5>
                             <br>
                             <h4>Equilibrio Nash: </h4><h5><%out.println(nash);%></h5>
                             <br>
-                            <a class="btn btn-primary" style="margin: auto;" role="button" href="index.html">Salir</a>
+                            <a class="btn btn-primary center center-block" style="margin: auto;" role="button" href="index.html">Salir</a>
                         </div>
                     </div>
 

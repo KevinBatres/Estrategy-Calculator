@@ -81,7 +81,7 @@
     <body>
 
 
-        <!--FEATURES AREA-->
+        <!-- Seccion de 2x2 -->
         <section id="matriz2" class="features-area relative padding-100-50 gray-bg">
             <div class="container">
                 <div class="row">
@@ -137,6 +137,8 @@
                         </table>
                         <br>
                         <br>
+                        
+                        <!-- Seccion de Resultados -->
                         <div id="resultados" style="color: #fff!important"> 
                             <h4>Estrategia Dominante: </h4><h5><%out.println(dominante);%></h5>
                             <br>
@@ -144,7 +146,7 @@
                             <br>
                             <h4>Equilibrio Nash: </h4><h5><%out.println(nash);%></h5>
                             <br>
-                            <a class="btn btn-primary" style="margin: auto;" role="button" href="index.html">Salir</a>
+                            <a class="btn btn-primary center-block" style="margin: auto;" role="button" href="index.html">Salir</a>
                         </div>
                     </div>
                     
